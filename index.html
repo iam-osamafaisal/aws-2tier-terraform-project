@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>2-Tier Web Application</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #4f9cff, #6ae8ff);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: fadeIn 1.2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: scale(0.97); }
+        to { opacity: 1; transform: scale(1); }
+    }
+
+    .card {
+        width: 650px;
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0px 10px 25px rgba(0,0,0,0.25);
+        text-align: center;
+    }
+
+    h1 {
+        color: #222;
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    .blink {
+        animation: blink 1.5s infinite;
+        color: #0077ff;
+    }
+
+    @keyframes blink {
+        0% { opacity: 1; }
+        50% { opacity: 0.4; }
+        100% { opacity: 1; }
+    }
+
+    .tags {
+        margin-top: 20px;
+    }
+
+    .tag {
+        background: #e8f3ff;
+        padding: 8px 16px;
+        border-radius: 8px;
+        margin: 5px;
+        color: #006be0;
+        font-size: 15px;
+        display: inline-block;
+        transition: transform 0.2s;
+    }
+
+    .tag:hover {
+        transform: scale(1.1);
+    }
+
+    .footer {
+        margin-top: 25px;
+        font-size: 16px;
+        color: #444;
+    }
+</style>
+
+<script>
+    // Simple animation on page load
+    window.onload = () => {
+        document.getElementById("title").style.transform = "scale(1.05)";
+        setTimeout(() => {
+            document.getElementById("title").style.transform = "scale(1)";
+        }, 500);
+    };
+</script>
+
+</head>
+<body>
+
+<div class="card">
+    <h1 id="title">🚀 2-Tier Web Application Successfully Deployed</h1>
+    <p class="blink">Powered by Terraform + AWS Cloud</p>
+
+    <p style="font-size: 18px; color: #444;">
+        This webpage is served from an <b>EC2 Instance (Web Tier)</b><br>
+        with a secure <b>RDS MySQL (Database Tier)</b> inside a private subnet.
+    </p>
+
+    <div class="tags">
+        <span class="tag">AWS EC2</span>
+        <span class="tag">RDS MySQL</span>
+        <span class="tag">Terraform IaC</span>
+        <span class="tag">VPC Subnets</span>
+        <span class="tag">Security Groups</span>
+        <span class="tag">Bash Script</span>
+        <span class="tag">HTML + CSS + JS</span>
+    </div>
+
+    <div class="footer">
+        Created by: <b>Osama Faisal</b><br>
+        Bangalore, India
+    </div>
+</div>
+
+</body>
+</html>
